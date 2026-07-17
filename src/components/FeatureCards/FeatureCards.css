@@ -1,0 +1,204 @@
+.fc {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0 40px;
+}
+
+.fc picture {
+  display: contents;
+}
+
+.fc-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+}
+
+.fc-content {
+  position: relative;
+  z-index: 1;
+}
+
+.fc-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 12px;
+}
+
+.fc-title {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.fc-title-accent {
+  background: linear-gradient(180deg, #c48bff 0%, #a066f5 40%, #8e57e8 70%, #7745d6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fc-subtext {
+  font-size: 15px;
+}
+
+/* ============================================================================
+   MOBILE: CAROUSEL VERSION (current) — slow-rotating 3D stack, active card
+   centered and in focus, others pushed to the sides in a visible "deck".
+   Hidden at desktop widths in favor of the static .fc-grid row below.
+============================================================================ */
+
+.fc-stage {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+  aspect-ratio: 700 / 1120;
+  perspective: 1300px;
+}
+
+.fc-card-slot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64%;
+  transform:
+    translate(-50%, -50%)
+    translateX(calc(var(--offset) * 72px))
+    translateZ(calc(var(--abs) * -110px))
+    rotateY(calc(var(--offset) * -24deg))
+    scale(calc(1 - var(--abs) * 0.18));
+  opacity: calc(1 - var(--abs) * 0.4);
+  transition: transform 1.1s cubic-bezier(0.45, 0, 0.2, 1), opacity 1.1s ease;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.fc-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  animation: fc-float 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes fc-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* ============================================================================
+   FADE/SLIDE VERSION (revert): single card visible at a time, cross-fading
+   in place. To restore: comment out the "CAROUSEL VERSION" rules above and
+   uncomment this block (also swap the JSX per the comment in FeatureCards.jsx).
+
+.fc-stage {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+  aspect-ratio: 700 / 1120;
+}
+
+.fc-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.fc-card-img.is-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+============================================================================ */
+
+.fc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.fc-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.fc-dot.is-active {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  transform: scale(1.3);
+}
+
+/* ============================================================================
+   DESKTOP: static 4-column row, all cards visible at once, no rotation.
+============================================================================ */
+
+.fc-grid {
+  display: none;
+}
+
+.fc-card {
+  min-width: 0;
+}
+
+.fc-grid-img {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .fc {
+    padding: 40px 0 70px;
+  }
+
+  .fc-header {
+    max-width: 860px;
+  }
+
+  .fc-title {
+    font-size: 62px;
+    white-space: nowrap;
+  }
+
+  .fc-subtext {
+    font-size: 16.5px;
+  }
+
+  .fc-stage-wrap {
+    display: none;
+  }
+
+  .fc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}

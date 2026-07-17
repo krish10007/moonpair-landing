@@ -1,0 +1,79 @@
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="orangeGlow" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#ffe6a8"/>
+    <stop offset="45%" stop-color="#f9a825"/>
+    <stop offset="100%" stop-color="#c9660f"/>
+  </radialGradient>
+  <radialGradient id="pinkGlow" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#ffd6ec"/>
+    <stop offset="45%" stop-color="#ec4899"/>
+    <stop offset="100%" stop-color="#a3186a"/>
+  </radialGradient>
+  <radialGradient id="heartGlow" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#e0d4ff"/>
+    <stop offset="100%" stop-color="#8b5cf6"/>
+  </radialGradient>
+  <radialGradient id="planetGlow" cx="50%" cy="0%" r="80%">
+    <stop offset="0%" stop-color="#c9a6ff" stop-opacity="0.9"/>
+    <stop offset="40%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="planetBody" cx="40%" cy="20%" r="80%">
+    <stop offset="0%" stop-color="#6d3fc9"/>
+    <stop offset="60%" stop-color="#3a1d6e"/>
+    <stop offset="100%" stop-color="#1a0e3a"/>
+  </radialGradient>
+  <radialGradient id="cloudFade" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#c9a6ff" stop-opacity="0.55"/>
+    <stop offset="100%" stop-color="#c9a6ff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="18"/>
+  </filter>
+  <filter id="largeBlur" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="26"/>
+  </filter>
+</defs>
+
+<g fill="#ffffff">
+  <circle cx="80" cy="90" r="2" opacity="0.8"/>
+  <circle cx="680" cy="60" r="1.6" opacity="0.6"/>
+  <circle cx="740" cy="180" r="2.2" opacity="0.9"/>
+  <circle cx="60" cy="260" r="1.4" opacity="0.5"/>
+  <circle cx="600" cy="130" r="1.2" opacity="0.7"/>
+  <circle cx="200" cy="50" r="1.4" opacity="0.6"/>
+  <circle cx="400" cy="40" r="1.8" opacity="0.7"/>
+  <circle cx="130" cy="180" r="1.2" opacity="0.5"/>
+  <circle cx="720" cy="320" r="1.6" opacity="0.6"/>
+  <circle cx="40" cy="420" r="1.4" opacity="0.5"/>
+</g>
+
+<g fill="none" stroke="#c9a6ff" stroke-width="1.4" stroke-opacity="0.3" stroke-dasharray="2 10">
+  <ellipse cx="400" cy="560" rx="330" ry="80"/>
+  <ellipse cx="400" cy="560" rx="260" ry="60"/>
+  <ellipse cx="400" cy="560" rx="190" ry="42"/>
+</g>
+<ellipse cx="400" cy="560" rx="90" ry="18" fill="url(#planetGlow)"/>
+
+<line x1="270" y1="330" x2="530" y2="330" stroke="#f4c95d" stroke-width="2" stroke-dasharray="3 8" opacity="0.8"/>
+<circle cx="400" cy="330" r="4" fill="#f4c95d"/>
+
+<circle cx="255" cy="330" r="150" fill="#f9a825" opacity="0.12" filter="url(#softBlur)"/>
+<circle cx="255" cy="330" r="115" fill="url(#orangeGlow)"/>
+<path d="M 215 345 Q 255 375 295 345" stroke="#4a2a00" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.75"/>
+
+<circle cx="545" cy="330" r="150" fill="#ec4899" opacity="0.12" filter="url(#softBlur)"/>
+<circle cx="545" cy="330" r="115" fill="url(#pinkGlow)"/>
+<path d="M 505 345 Q 545 375 585 345" stroke="#5a0f38" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.75"/>
+
+<g transform="translate(377,235) scale(2)">
+  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="url(#heartGlow)"/>
+</g>
+
+<ellipse cx="220" cy="660" rx="130" ry="60" fill="url(#cloudFade)" filter="url(#largeBlur)"/>
+<ellipse cx="600" cy="670" rx="150" ry="65" fill="url(#cloudFade)" filter="url(#largeBlur)"/>
+<circle cx="400" cy="1020" r="430" fill="url(#planetBody)"/>
+<circle cx="400" cy="1020" r="430" fill="none" stroke="#c9a6ff" stroke-width="3" opacity="0.5"/>
+<ellipse cx="400" cy="640" rx="100" ry="16" fill="#f4c95d" opacity="0.2" filter="url(#smallBlur)"/>
+</svg>

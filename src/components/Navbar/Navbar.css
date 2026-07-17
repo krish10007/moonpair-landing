@@ -1,0 +1,143 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 7, 20, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-download {
+  background: linear-gradient(135deg, #a875ff, var(--purple) 60%, #6d3fd1);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+}
+
+.navbar-download-desktop {
+  display: none;
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+.navbar-download-mobile {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+/* mobile dropdown */
+.navbar-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 20px 20px;
+  background: rgba(10, 7, 20, 0.98);
+  border-bottom: 1px solid var(--border);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-links.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar-links a {
+  padding: 12px 6px;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar-links a:last-child {
+  border-bottom: none;
+}
+
+/* Desktop */
+@media (min-width: 860px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-download-desktop {
+    display: inline-flex;
+  }
+
+  .navbar-links {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    background: none;
+    border: none;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    transition: none;
+  }
+
+  .navbar-links a {
+    padding: 0;
+    font-size: 15px;
+    color: var(--text-muted);
+    border: none;
+  }
+
+  .navbar-links a:hover {
+    color: var(--text);
+  }
+
+  .navbar-download-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+.eycd {
+  position: relative;
+  padding: 96px 0 60px;
+  overflow: hidden;
+}
+
+.eycd > picture {
+  display: contents;
+}
+
+.eycd-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.eycd-content {
+  position: relative;
+  z-index: 1;
+}
+
+.eycd-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+
+.eycd-title {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.eycd-title-accent {
+  color: var(--text);
+}
+
+.eycd-subtext {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.eycd-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eycd-card {
+  min-width: 0;
+}
+
+.eycd-card-img {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .eycd {
+    padding: 120px 0 50px;
+  }
+
+  .eycd-header {
+    max-width: 860px;
+  }
+
+  .eycd-title {
+    font-size: 62px;
+    white-space: nowrap;
+  }
+
+  .eycd-subtext {
+    font-size: 16.5px;
+  }
+
+  .eycd-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
