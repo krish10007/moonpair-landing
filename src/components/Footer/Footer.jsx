@@ -28,7 +28,7 @@ export default function Footer() {
           </p>
           <a
             className="footer-social"
-            href="https://instagram.com"
+            href="https://www.instagram.com/moonpairapp/?hl=en"
             target="_blank"
             rel="noreferrer"
             aria-label="MoonPair on Instagram"
