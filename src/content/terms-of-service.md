@@ -7,9 +7,9 @@ Last Updated: July 16, 2026
 
 Welcome to Moonpair, operated by Fnu Krish ("Company," "we," "us," or "our").
 
-These Terms of Service ("Terms") govern your access to and use of the Moonpair mobile application and any associated website (together, the "Services"). Our Privacy Policy also governs your use of the Services and is available at https://moonpairapp.com/privacy.
+These Terms of Service ("Terms") govern your access to and use of the Moonpair mobile application and any associated website (together, the "Services"). Our [Privacy Policy](/privacy) also governs your use of the Services and is available at https://moonpairapp.com/privacy.
 
-Your agreement with us includes these Terms and our Privacy Policy (together, the "Agreements"). By creating an account or using the Services, you acknowledge that you've read and understood the Agreements and agree to be bound by them. If you do not agree, you may not use the Services.
+Your agreement with us includes these Terms and our [Privacy Policy](/privacy) (together, the "Agreements"). By creating an account or using the Services, you acknowledge that you've read and understood the Agreements and agree to be bound by them. If you do not agree, you may not use the Services.
 
 ---
 
