@@ -74,10 +74,13 @@
   min-width: 0;
   padding: 12px 14px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #a875ff, var(--purple) 60%, #6d3fd1);
-  border: none;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(rgba(20, 14, 36, 0.85), rgba(20, 14, 36, 0.85)) padding-box,
+    linear-gradient(135deg, #a875ff, var(--purple) 60%, #6d3fd1) border-box;
+  color: var(--text);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 .store-btn svg {
@@ -94,7 +97,7 @@
 
 .store-btn-text small {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
