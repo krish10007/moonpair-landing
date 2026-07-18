@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/moonpair-premium-app-store-1024.png';
 import './Navbar.css';
 
 const NAV_LINKS = [

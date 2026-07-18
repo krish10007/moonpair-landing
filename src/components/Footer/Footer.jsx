@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/moonpair-premium-app-store-1024.png';
 import './Footer.css';
 
 function InstagramIcon(props) {
