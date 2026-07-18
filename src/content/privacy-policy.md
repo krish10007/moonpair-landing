@@ -183,4 +183,4 @@ We may update this Privacy Policy from time to time by posting the revised versi
 17. CONTACT US
 
 Fnu Krish
-Email: support@moonpairapp.com
+Email: [support@moonpairapp.com](/support)

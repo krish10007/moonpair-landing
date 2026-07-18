@@ -202,4 +202,4 @@ BY USING THE SERVICES, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE
 23. CONTACT US
 
 Fnu Krish
-Email: support@moonpairapp.com
+Email: [support@moonpairapp.com](/support)
