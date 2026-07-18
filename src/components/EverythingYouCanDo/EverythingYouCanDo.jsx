@@ -31,7 +31,7 @@ export default function EverythingYouCanDo() {
             Inside your <span className="eycd-title-accent">universe</span>
           </h2>
           <p className="eycd-subtext">
-            Everything you need to connect, remember, and grow together.
+            All the little ways to connect, have fun, and keep your relationship close — in one place.
           </p>
         </div>
 
