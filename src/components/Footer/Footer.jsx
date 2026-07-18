@@ -39,7 +39,7 @@ export default function Footer() {
 
         <nav className="footer-links">
           <Link to="/support">Support</Link>
-          <Link to="/terms-of-service">Terms &amp; Conditions</Link>
+          <Link to="/terms">Terms &amp; Conditions</Link>
           <Link to="/privacy">Privacy Policy</Link>
         </nav>
 
