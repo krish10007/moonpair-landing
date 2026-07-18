@@ -74,10 +74,10 @@
   min-width: 0;
   padding: 12px 14px;
   border-radius: 14px;
-  background: rgba(20, 14, 36, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--text);
-  backdrop-filter: blur(4px);
+  background: linear-gradient(135deg, #a875ff, var(--purple) 60%, #6d3fd1);
+  border: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
 }
 
 .store-btn svg {
@@ -94,7 +94,7 @@
 
 .store-btn-text small {
   font-size: 11px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
