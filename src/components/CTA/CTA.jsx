@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import ctaPlanet from '../../assets/cta plannet 1.png';
 import ctaPlanetLaptop from '../../assets/cta plannet laptop.png';
+import ComingSoonModal from '../ComingSoonModal/ComingSoonModal';
 import './CTA.css';
 
 function AppleIcon(props) {
@@ -22,6 +24,13 @@ function PlayIcon(props) {
 }
 
 export default function CTA() {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+
+  const openComingSoon = (e) => {
+    e.preventDefault();
+    setShowComingSoon(true);
+  };
+
   return (
     <section id="cta" className="cta">
       <picture>
@@ -43,14 +52,14 @@ export default function CTA() {
         <p className="cta-subtext">Every relationship deserves its own little world.</p>
 
         <div className="cta-buttons">
-          <a href="#" className="store-btn">
+          <a href="#" className="store-btn" onClick={openComingSoon}>
             <AppleIcon />
             <span className="store-btn-text">
               <small>Download on the</small>
               <strong>App Store</strong>
             </span>
           </a>
-          <a href="#" className="store-btn">
+          <a href="#" className="store-btn" onClick={openComingSoon}>
             <PlayIcon />
             <span className="store-btn-text">
               <small>GET IT ON</small>
@@ -59,6 +68,8 @@ export default function CTA() {
           </a>
         </div>
       </div>
+
+      <ComingSoonModal open={showComingSoon} onClose={() => setShowComingSoon(false)} />
     </section>
   );
 }

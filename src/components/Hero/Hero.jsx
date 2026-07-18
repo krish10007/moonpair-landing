@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import galaxyBg from '../../assets/hero galaxy01.png';
 import galaxyBgLaptop from '../../assets/hero_galaxy_1366x768.png';
+import ComingSoonModal from '../ComingSoonModal/ComingSoonModal';
 import './Hero.css';
 
 function AppleIcon(props) {
@@ -22,6 +24,13 @@ function PlayIcon(props) {
 }
 
 export default function Hero() {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+
+  const openComingSoon = (e) => {
+    e.preventDefault();
+    setShowComingSoon(true);
+  };
+
   return (
     <section id="hero" className="hero">
       <picture>
@@ -35,14 +44,14 @@ export default function Hero() {
         </h1>
 
         <div className="hero-buttons">
-          <a href="#" className="store-btn">
+          <a href="#" className="store-btn" onClick={openComingSoon}>
             <AppleIcon />
             <span className="store-btn-text">
               <small>Download on the</small>
               <strong>App Store</strong>
             </span>
           </a>
-          <a href="#" className="store-btn">
+          <a href="#" className="store-btn" onClick={openComingSoon}>
             <PlayIcon />
             <span className="store-btn-text">
               <small>GET IT ON</small>
@@ -56,6 +65,8 @@ export default function Hero() {
           create memories, and grow closer every day.
         </p>
       </div>
+
+      <ComingSoonModal open={showComingSoon} onClose={() => setShowComingSoon(false)} />
     </section>
   );
 }
