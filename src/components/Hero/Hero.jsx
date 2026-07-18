@@ -52,8 +52,8 @@ export default function Hero() {
         </div>
 
         <p className="hero-subtext">
-          MoonPair is a couples app for sending love, saving memories, and feeling close —
-          one little moment at a time.
+          MoonPair is a private universe for couples to share love, understand each other,
+          create memories, and grow closer every day.
         </p>
       </div>
     </section>
