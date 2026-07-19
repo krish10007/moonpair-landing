@@ -41,6 +41,7 @@ export default function Footer() {
           <Link to="/support">Support</Link>
           <Link to="/terms">Terms &amp; Conditions</Link>
           <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/delete-account">Delete Account</Link>
         </nav>
 
         <p className="footer-copyright">© {year} MoonPair. All rights reserved.</p>

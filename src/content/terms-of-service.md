@@ -7,7 +7,7 @@ Last Updated: July 16, 2026
 
 Welcome to Moonpair, operated by Fnu Krish ("Company," "we," "us," or "our").
 
-These Terms of Service ("Terms") govern your access to and use of the Moonpair mobile application and any associated website (together, the "Services"). Our [Privacy Policy](/privacy) also governs your use of the Services and is available at https://moonpairapp.com/privacy.
+These Terms of Service ("Terms") govern your access to and use of the Moonpair mobile application and any associated website (together, the "Services"). Our [Privacy Policy](/privacy) also governs your use of the Services and is available at [moonpairapp.com/privacy](/privacy).
 
 Your agreement with us includes these Terms and our [Privacy Policy](/privacy) (together, the "Agreements"). By creating an account or using the Services, you acknowledge that you've read and understood the Agreements and agree to be bound by them. If you do not agree, you may not use the Services.
 
@@ -21,7 +21,7 @@ Our Services are intended only for individuals at least 18 years old. By accessi
 
 3. YOUR ACCOUNT
 
-You are responsible for maintaining the confidentiality of your login credentials and for all activity under your account. You agree to provide accurate account information and keep it up to date. You may not share your account, transfer it, or create an account on behalf of someone else without authorization. Notify us immediately at support@moonpairapp.com if you suspect unauthorized use of your account.
+You are responsible for maintaining the confidentiality of your login credentials and for all activity under your account. You agree to provide accurate account information and keep it up to date. You may not share your account, transfer it, or create an account on behalf of someone else without authorization. Notify us immediately at [support@moonpairapp.com](/support) if you suspect unauthorized use of your account.
 
 ---
 
@@ -156,7 +156,7 @@ You agree to indemnify and hold us harmless from any claims, damages, losses, or
 
 16. TERMINATION
 
-We may suspend or terminate your account and bar access to the Services at any time, without prior notice, at our sole discretion, including for breach of these Terms. You may deactivate your account at any time via in-app settings or by contacting support@moonpairapp.com. Provisions that by their nature should survive termination — including ownership, warranty disclaimers, indemnity, and limitation of liability — will survive.
+We may suspend or terminate your account and bar access to the Services at any time, without prior notice, at our sole discretion, including for breach of these Terms. You may deactivate your account at any time via in-app settings or by contacting [support@moonpairapp.com](/support). Provisions that by their nature should survive termination — including ownership, warranty disclaimers, indemnity, and limitation of liability — will survive.
 
 ---
 

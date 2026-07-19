@@ -1,6 +1,35 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Link } from 'react-router-dom';
 import './LegalPage.css';
+
+// ReactMarkdown renders every link as a plain <a>, which for an internal path
+// like /support triggers a full browser reload instead of client-side routing.
+// This maps internal paths onto react-router's <Link> so navigation between
+// legal pages stays instant, and hardens external links with rel="noopener".
+const markdownComponents = {
+  a: ({ href = '', children, ...props }) => {
+    if (href.startsWith('/')) {
+      return (
+        <Link to={href} {...props}>
+          {children}
+        </Link>
+      );
+    }
+    if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+      return (
+        <a href={href} {...props}>
+          {children}
+        </a>
+      );
+    }
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+        {children}
+      </a>
+    );
+  },
+};
 
 // The source .md files are plain-text legal docs, not authored with markdown
 // "#" headings. This promotes their numbered section titles (e.g. "3.1 Account
@@ -53,7 +82,9 @@ export default function LegalPage({ title, effectiveDate, lastUpdated, raw }) {
           </p>
         )}
         <div className="legal-body">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            {body}
+          </ReactMarkdown>
         </div>
       </div>
     </section>

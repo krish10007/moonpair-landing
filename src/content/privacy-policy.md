@@ -13,7 +13,7 @@ We know Moonpair holds some of the most personal content two people share with e
 - We only work with third-party service providers under contracts that prohibit them from reusing or selling your data for their own purposes.
 - We collect limited usage data to fix bugs and improve the App.
 
-If you have any questions or concerns, contact us at support@moonpairapp.com.
+If you have any questions or concerns, contact us at [support@moonpairapp.com](/support).
 
 ---
 
@@ -80,7 +80,7 @@ We do not use your personal content (photos, diary entries, voice notes, message
 
 We retain your Personal Data and User Content for as long as your account is active. Usage/device data is generally retained for a shorter period, except where needed for security, functionality, or legal reasons.
 
-If you delete your account:
+If you [delete your account](/delete-account):
 - Your profile and login credentials are deleted or anonymized within 30 days.
 - Content exclusively yours (e.g., a private diary entry not shared with your partner) is deleted.
 - Shared content (joint memories, photos sent to your partner) may remain visible to your partner, since it forms part of the shared couple record, unless they also delete their account.
@@ -133,7 +133,7 @@ If you are a resident of the EU/EEA, you have the right to:
 
 We may ask you to verify your identity before acting on these requests, and note that we may not be able to provide the Service without certain necessary data. You may also lodge a complaint with your local Data Protection Authority.
 
-To exercise these rights, email support@moonpairapp.com.
+To exercise these rights, email [support@moonpairapp.com](/support).
 
 ---
 
@@ -143,7 +143,7 @@ In accordance with CalOPPA:
 - You can browse our website anonymously.
 - This Privacy Policy is clearly linked and labeled "Privacy" from our website's home page.
 - You'll be notified of policy changes on this page.
-- You can update your personal information by emailing support@moonpairapp.com.
+- You can update your personal information by emailing [support@moonpairapp.com](/support).
 
 **"Do Not Track" Signals:** We are committed to giving you meaningful choices about your data, but we do not currently recognize or respond to browser "Do Not Track" signals.
 
@@ -156,13 +156,13 @@ If you are a California resident, you have the right to ask us:
 - To delete the personal information we hold about you
 - Whether we've sold or shared your personal information (we do not sell or share personal information for cross-context behavioral advertising)
 
-You're entitled to make an access request up to two times in a rolling 12-month period. To exercise these rights, email support@moonpairapp.com. We will not discriminate against you for exercising them.
+You're entitled to make an access request up to two times in a rolling 12-month period. To exercise these rights, email [support@moonpairapp.com](/support). We will not discriminate against you for exercising them.
 
 ---
 
 14. CHILDREN'S PRIVACY
 
-Moonpair is not directed at, and is not intended for use by, anyone under 18 years old. We do not knowingly collect personal information from anyone under 18. If we learn that someone under 18 has created an account or provided us with personal information, we will take steps to delete it. If you believe this has happened, contact us at support@moonpairapp.com.
+Moonpair is not directed at, and is not intended for use by, anyone under 18 years old. We do not knowingly collect personal information from anyone under 18. If we learn that someone under 18 has created an account or provided us with personal information, we will take steps to delete it. If you believe this has happened, contact us at [support@moonpairapp.com](/support).
 
 *(Flag for Krish: I've set this to 18+ to match how comparable couples/relationship apps typically handle age gating, and to keep the App clearly outside COPPA and most minor-content restrictions given the intimacy of diary/photo/voice content. This needs to line up with your actual App Store age rating and category — a 12+ content rating alongside an 18+ account minimum is workable, but double check this combination doesn't trip anything in App Store Connect / Play Console review. Let me know if you want 13+ or another number instead and I'll update both documents.)*
 
