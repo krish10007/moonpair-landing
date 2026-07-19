@@ -33,7 +33,9 @@ export default function ComingSoonModal({ open, onClose }) {
           &times;
         </button>
         <picture>
-          <source media="(min-width: 768px)" srcSet="/coming-soon-desktop.jpg" />
+          {/* 960px matches the site-wide mobile/desktop breakpoint used by every
+              other component - keep this in sync with ComingSoonModal.css. */}
+          <source media="(min-width: 960px)" srcSet="/coming-soon-desktop.jpg" />
           <img src="/coming-soon-mobile.jpg" alt="MoonPair — Coming Soon" className="cs-img" />
         </picture>
       </div>

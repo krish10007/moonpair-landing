@@ -22,7 +22,10 @@
   animation: cs-pop 0.25s ease;
 }
 
-@media (min-width: 768px) {
+/* 960px is the site-wide mobile/desktop breakpoint - must stay in sync with the
+   <source media> query in ComingSoonModal.jsx, or the modal would size for one
+   image while loading the other. */
+@media (min-width: 960px) {
   .cs-modal {
     max-width: 640px;
   }

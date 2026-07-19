@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './DeleteAccount.css';
 
 // Publicly reachable account-deletion page. Google Play requires this URL to be
@@ -56,12 +57,9 @@ export default function DeleteAccount() {
             <h2 className="da-heading">Can&apos;t access the app?</h2>
             <p>
               If you&apos;re unable to log in or use the in-app delete option, email us at{' '}
-              <a
-                className="da-link"
-                href="mailto:support@moonpairapp.com?subject=Delete%20My%20Account"
-              >
+              <Link className="da-link" to="/support">
                 support@moonpairapp.com
-              </a>{' '}
+              </Link>{' '}
               with the subject <strong>&ldquo;Delete My Account&rdquo;</strong> and your
               registered email address, and we&apos;ll process the request manually.
             </p>

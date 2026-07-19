@@ -1,0 +1,75 @@
+.nf {
+  padding: 140px 0 110px;
+  min-height: 66vh;
+  display: flex;
+  align-items: center;
+}
+
+.nf-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.nf-title {
+  font-size: 40px;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+}
+
+.nf-title-accent {
+  background: linear-gradient(180deg, #c48bff 0%, #a066f5 40%, #8e57e8 70%, #7745d6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nf-subtext {
+  font-size: 15.5px;
+  line-height: 1.65;
+  max-width: 420px;
+  color: var(--text-muted);
+}
+
+.nf-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.nf-btn-link {
+  font-size: 14.5px;
+  color: #c9b8ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nf-btn-link:hover {
+  color: var(--text);
+}
+
+@media (min-width: 960px) {
+  .nf {
+    padding: 170px 0 130px;
+  }
+
+  .nf-title {
+    font-size: 52px;
+  }
+
+  .nf-subtext {
+    font-size: 17px;
+    max-width: 470px;
+  }
+
+  .nf-actions {
+    flex-direction: row;
+    gap: 22px;
+    margin-top: 18px;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/moonpair-premium-app-store-1024.png';
 import './Navbar.css';
@@ -18,26 +19,26 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-inner container">
-        <a href="/#hero" className="navbar-logo" onClick={handleLinkClick}>
+        <Link to="/#hero" className="navbar-logo" onClick={handleLinkClick}>
           <img src={logo} alt="MoonPair" />
           <span>MoonPair</span>
-        </a>
+        </Link>
 
         <nav className={`navbar-links ${open ? 'is-open' : ''}`}>
           {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href} onClick={handleLinkClick}>
+            <Link key={link.label} to={link.href} onClick={handleLinkClick}>
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a href="/#cta" className="btn navbar-download navbar-download-mobile" onClick={handleLinkClick}>
+          <Link to="/#cta" className="btn navbar-download navbar-download-mobile" onClick={handleLinkClick}>
             Download
-          </a>
+          </Link>
         </nav>
 
         <div className="navbar-actions">
-          <a href="/#cta" className="btn navbar-download navbar-download-desktop">
+          <Link to="/#cta" className="btn navbar-download navbar-download-desktop">
             Download
-          </a>
+          </Link>
           <button
             className="navbar-toggle"
             aria-label={open ? 'Close menu' : 'Open menu'}
