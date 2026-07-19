@@ -1,0 +1,73 @@
+/* Deliberately self-contained: this renders when something has already gone
+   wrong, so it uses explicit colours with var() fallbacks rather than relying
+   on the rest of the design system having loaded correctly. */
+.eb {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--bg, #0a0616);
+  color: var(--text, #f3efff);
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  text-align: center;
+}
+
+.eb-inner {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.eb-title {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.eb-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted, #b3a8cc);
+}
+
+.eb-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.eb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple, #8b5cf6), var(--pink, #ec4899));
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+}
+
+.eb-link {
+  font-size: 14px;
+  color: #c9b8ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.eb-link:hover {
+  color: var(--text, #f3efff);
+}
+
+@media (min-width: 960px) {
+  .eb-title {
+    font-size: 36px;
+  }
+}

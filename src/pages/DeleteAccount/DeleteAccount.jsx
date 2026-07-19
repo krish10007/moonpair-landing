@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Seo from '../../components/Seo/Seo';
 import './DeleteAccount.css';
 
 // Publicly reachable account-deletion page. Google Play requires this URL to be
@@ -8,6 +9,10 @@ import './DeleteAccount.css';
 export default function DeleteAccount() {
   return (
     <section className="da">
+      <Seo
+        title="Delete Your Account — MoonPair"
+        description="How to permanently delete your MoonPair account and what data is removed. Delete from the app in Settings, or contact support if you can't log in."
+      />
       <div className="container da-content">
         <span className="section-eyebrow">✦ Account &amp; Data ✦</span>
 

@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Link } from 'react-router-dom';
+import Seo from '../../components/Seo/Seo';
 import './LegalPage.css';
 
 // ReactMarkdown renders every link as a plain <a>, which for an internal path
@@ -67,11 +68,12 @@ function stripHeaderLines(raw) {
   return lines.slice(firstSectionIndex).join('\n');
 }
 
-export default function LegalPage({ title, effectiveDate, lastUpdated, raw }) {
+export default function LegalPage({ title, effectiveDate, lastUpdated, raw, description }) {
   const body = promoteHeadings(stripHeaderLines(raw));
 
   return (
     <section className="legal">
+      <Seo title={`${title} — MoonPair`} description={description} />
       <div className="container legal-content">
         <h1 className="legal-title">{title}</h1>
         {(effectiveDate || lastUpdated) && (

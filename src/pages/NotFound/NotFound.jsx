@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Seo from '../../components/Seo/Seo';
 import './NotFound.css';
 
 // Catch-all for unmatched routes. Without this, vercel.json's SPA rewrite hands
@@ -7,6 +8,9 @@ import './NotFound.css';
 export default function NotFound() {
   return (
     <section className="nf">
+      {/* Page not found - tell crawlers not to index it. */}
+      <Seo title="Page Not Found — MoonPair" />
+      <meta name="robots" content="noindex" />
       <div className="container nf-content">
         <span className="section-eyebrow">✦ Lost in Space ✦</span>
 

@@ -1,8 +1,13 @@
+import Seo from '../../components/Seo/Seo';
 import './Support.css';
 
 export default function Support() {
   return (
     <section className="support">
+      <Seo
+        title="Support — MoonPair"
+        description="Need help with MoonPair? Email our team at support@moonpairapp.com and we'll get back to you, usually within 24 hours."
+      />
       <div className="container support-content">
         <span className="section-eyebrow">✦ We're Here For You ✦</span>
 
