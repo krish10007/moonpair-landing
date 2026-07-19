@@ -1,28 +1,29 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import cardUniverse from '../../assets/card-universe.png';
-import cardTogether from '../../assets/card-together.png';
-import cardSend from '../../assets/card-send.png';
-import cardMemories from '../../assets/card-memories.png';
-import cardUniverseLaptop from '../../assets/card-universe-laptop.png';
-import cardTogetherLaptop from '../../assets/card-together-laptop.png';
-import cardSendLaptop from '../../assets/card-send-laptop.png';
-import cardMemoriesLaptop from '../../assets/card-memories-laptop.png';
-// Mobile carousel art (3:4 portrait). The old wide-banner mobile cards
-// (card-*.png, ~2.89 ratio) are still imported above for the desktop grid
-// and are kept for easy revert.
+// Mobile carousel art (3:4 portrait).
 import cardStayConnected from '../../assets/section 2/card-stay-connected.jpg';
 import cardDiscover from '../../assets/section 2/card-discover.jpg';
 import cardKeepStory from '../../assets/section 2/card-keep-story.jpg';
 import cardBuildUniverse from '../../assets/section 2/card-build-universe-s2.jpg';
+// Desktop grid art (tall portrait, ~0.48 ratio).
+// NOTE: the source files were numbered "section 2 card N laptop.png", but N did
+// NOT match the mobile numbering - laptop files 3 and 4 were Build Your Universe
+// and Keep Your Story respectively, i.e. swapped relative to mobile. These
+// imports are named by CONTENT so that mismatch can't resurface. Originals are
+// in src/assets/_archive/ along with the previous card-*-laptop.png set.
+import cardStayConnectedLaptop from '../../assets/section 2/card-stay-connected-laptop.jpg';
+import cardDiscoverLaptop from '../../assets/section 2/card-discover-laptop.jpg';
+import cardKeepStoryLaptop from '../../assets/section 2/card-keep-story-laptop.jpg';
+import cardBuildUniverseLaptop from '../../assets/section 2/card-build-universe-laptop.jpg';
 import sectionBg from '../../assets/section 2 back.jpg';
 import sectionBgLaptop from '../../assets/section 2 back laptop.jpg';
 import './EverythingYouCanDo.css';
 
+// Desktop-only grid cards. Same order as the mobile carousel below.
 const CARDS = [
-  { key: 'universe', src: cardUniverse, laptopSrc: cardUniverseLaptop, alt: 'Universe: Streaks, Milestones, Stardust' },
-  { key: 'together', src: cardTogether, laptopSrc: cardTogetherLaptop, alt: 'Together: Voice notes, Daily questions, Rituals' },
-  { key: 'send', src: cardSend, laptopSrc: cardSendLaptop, alt: 'Send: Diary, Photos, Secret Book' },
-  { key: 'memories', src: cardMemories, laptopSrc: cardMemoriesLaptop, alt: 'Memories: Couple profile, Special dates, Shared story' },
+  { key: 'stay-connected', src: cardStayConnectedLaptop, alt: 'Stay Connected: love notes, gifts, voice messages, mood sharing, good morning' },
+  { key: 'discover', src: cardDiscoverLaptop, alt: 'Discover Each Other: daily couple questions, Secret Book, This or That, Would You Rather, couple games' },
+  { key: 'keep-story', src: cardKeepStoryLaptop, alt: 'Keep Your Story: Shared Diary, Photo Book, Notes Jar, Memory Map, Special Dates' },
+  { key: 'build-universe', src: cardBuildUniverseLaptop, alt: 'Build Your Universe: Streaks & Milestones, Stardust Rewards, Days Together, Planets & Memories' },
 ];
 
 // Mobile-only carousel slides (portrait art, different from the desktop grid).
@@ -220,14 +221,15 @@ export default function EverythingYouCanDo() {
           </div>
         </div>
 
-        {/* DESKTOP: static 4-column grid, unchanged. */}
+        {/*
+          DESKTOP: static 4-column grid. Only rendered at >=960px (the grid is
+          display:none below that), so a single source is enough - no <picture>
+          needed, which also avoids fetching art the mobile view never shows.
+        */}
         <div className="eycd-grid">
-          {CARDS.map(({ key, src, laptopSrc, alt }) => (
+          {CARDS.map(({ key, src, alt }) => (
             <div key={key} className="eycd-card">
-              <picture>
-                <source media="(min-width: 960px)" srcSet={laptopSrc} />
-                <img src={src} alt={alt} className="eycd-card-img" />
-              </picture>
+              <img src={src} alt={alt} className="eycd-card-img" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
