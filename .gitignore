@@ -13,6 +13,13 @@ dist-ssr
 *.local
 .git-broken-backup
 
+# Archived source art. We never delete old assets, only move them into
+# _archive/ - but they don't belong in the repo either: ~89MB of superseded
+# PNGs was being carried into every clone and every Vercel build. Everything
+# already committed stays recoverable from git history; this just stops the
+# archive growing the repo from here on.
+src/assets/_archive/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
