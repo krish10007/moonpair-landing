@@ -49,72 +49,8 @@
   line-height: 1.6;
 }
 
-/* ---------------------------------------------------------------------------
-   MOBILE CAROUSEL (<960px). Native scroll-snap: the browser handles the touch
-   swipe, JS only drives auto-advance and keeps the dots in sync.
-   The track is padded by 9vw so the neighbouring cards peek in at both edges.
---------------------------------------------------------------------------- */
-.eycd-carousel {
-  position: relative;
-  /* Break out of .container's horizontal padding so the peek reaches the
-     screen edges instead of stopping at the gutter. */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  width: 100vw;
-}
-
-.eycd-track {
-  display: flex;
-  gap: 12px;
-  padding: 0 9vw;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.eycd-track::-webkit-scrollbar {
-  display: none;
-}
-
-.eycd-slide {
-  flex: 0 0 82vw;
-  scroll-snap-align: center;
-  min-width: 0;
-}
-
-.eycd-slide-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-}
-
-.eycd-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.eycd-dot {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.28);
-  cursor: pointer;
-  transition: background 0.25s ease, width 0.25s ease;
-}
-
-.eycd-dot.is-active {
-  width: 22px;
-  border-radius: 4px;
-  background: var(--purple, #8b5cf6);
-}
-
-/* The desktop 4-column grid is hidden on mobile; the carousel replaces it. */
+/* The desktop 4-column grid is hidden on mobile; the shared CardCarousel
+   component replaces it (see CardCarousel.css). */
 .eycd-grid {
   display: none;
 }
@@ -149,11 +85,7 @@
     font-size: 16.5px;
   }
 
-  /* Desktop: carousel off, static 4-column grid back on. */
-  .eycd-carousel {
-    display: none;
-  }
-
+  /* Desktop: static 4-column grid back on (carousel hides itself). */
   .eycd-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

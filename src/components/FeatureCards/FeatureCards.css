@@ -50,106 +50,9 @@
   font-size: 15px;
 }
 
-/* ============================================================================
-   MOBILE: CAROUSEL VERSION (current) — slow-rotating 3D stack, active card
-   centered and in focus, others pushed to the sides in a visible "deck".
-   Hidden at desktop widths in favor of the static .fc-grid row below.
-============================================================================ */
-
-.fc-stage {
-  position: relative;
-  max-width: 360px;
-  margin: 0 auto;
-  aspect-ratio: 700 / 1120;
-  perspective: 1300px;
-}
-
-.fc-card-slot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 64%;
-  transform:
-    translate(-50%, -50%)
-    translateX(calc(var(--offset) * 72px))
-    translateZ(calc(var(--abs) * -110px))
-    rotateY(calc(var(--offset) * -24deg))
-    scale(calc(1 - var(--abs) * 0.18));
-  opacity: calc(1 - var(--abs) * 0.4);
-  transition: transform 1.1s cubic-bezier(0.45, 0, 0.2, 1), opacity 1.1s ease;
-  transform-style: preserve-3d;
-  pointer-events: none;
-}
-
-.fc-card-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-  animation: fc-float 5s ease-in-out infinite;
-  will-change: transform;
-}
-
-@keyframes fc-float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-9px);
-  }
-}
-
-/* ============================================================================
-   FADE/SLIDE VERSION (revert): single card visible at a time, cross-fading
-   in place. To restore: comment out the "CAROUSEL VERSION" rules above and
-   uncomment this block (also swap the JSX per the comment in FeatureCards.jsx).
-
-.fc-stage {
-  position: relative;
-  max-width: 360px;
-  margin: 0 auto;
-  aspect-ratio: 700 / 1120;
-}
-
-.fc-card-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center top;
-  opacity: 0;
-  transform: translateY(12px) scale(0.98);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  pointer-events: none;
-}
-
-.fc-card-img.is-active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-============================================================================ */
-
-.fc-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.fc-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-  transition: background 0.25s ease, transform 0.25s ease;
-}
-
-.fc-dot.is-active {
-  background: linear-gradient(135deg, var(--purple), var(--pink));
-  transform: scale(1.3);
-}
+/* MOBILE: handled entirely by the shared <CardCarousel> component
+   (see CardCarousel.css). The previous 3D rotating stack and its
+   fade/slide predecessor lived here - both are in git history. */
 
 /* ============================================================================
    DESKTOP: static 4-column row, all cards visible at once, no rotation.
@@ -187,10 +90,6 @@
 
   .fc-subtext {
     font-size: 16.5px;
-  }
-
-  .fc-stage-wrap {
-    display: none;
   }
 
   .fc-grid {

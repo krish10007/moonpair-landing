@@ -1,0 +1,70 @@
+/* ---------------------------------------------------------------------------
+   Shared infinite peek carousel (mobile only).
+   Used by EverythingYouCanDo (section 2) and FeatureCards (section 3).
+   Hidden at >=960px, where each section shows its own static grid instead.
+--------------------------------------------------------------------------- */
+.cc {
+  position: relative;
+  /* Break out of .container's horizontal padding so the peek reaches the
+     screen edges instead of stopping at the gutter. */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+
+.cc-track {
+  display: flex;
+  gap: 12px; /* must match GAP in CardCarousel.jsx */
+  padding: 0 9vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cc-track::-webkit-scrollbar {
+  display: none;
+}
+
+.cc-slide {
+  flex: 0 0 82vw;
+  scroll-snap-align: center;
+  min-width: 0;
+}
+
+.cc-slide-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.cc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.cc-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+.cc-dot.is-active {
+  width: 22px;
+  border-radius: 4px;
+  background: var(--purple, #8b5cf6);
+}
+
+@media (min-width: 960px) {
+  .cc {
+    display: none;
+  }
+}
