@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ctaPlanet from '../../assets/cta plannet 1.png';
-import ctaPlanetLaptop from '../../assets/cta plannet laptop.png';
+import ctaPlanet from '../../assets/cta plannet 1.jpg';
+import ctaPlanetLaptop from '../../assets/cta plannet laptop.jpg';
 import ComingSoonModal from '../ComingSoonModal/ComingSoonModal';
 import './CTA.css';
 
@@ -35,7 +35,7 @@ export default function CTA() {
     <section id="cta" className="cta">
       <picture>
         <source media="(min-width: 960px)" srcSet={ctaPlanetLaptop} />
-        <img src={ctaPlanet} alt="" className="cta-bg" aria-hidden="true" />
+        <img src={ctaPlanet} alt="" className="cta-bg" aria-hidden="true" loading="lazy" decoding="async" />
       </picture>
 
       <div className="container cta-content">

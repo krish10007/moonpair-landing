@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import sectionBg from '../../assets/section 3/section 3 back.png';
-import sectionBgLaptop from '../../assets/section 3 back new.png';
+import sectionBg from '../../assets/section 3/section 3 back.jpg';
+import sectionBgLaptop from '../../assets/section 3 back new.jpg';
 // NOTE: using the new source cards (grow/keep/build regenerated at feel-closer's
 // size, so all four are naturally near-equal height — no stretching/padding needed).
 // Revert options for card art, in order of preference:
@@ -61,7 +61,7 @@ export default function FeatureCards() {
     <section id="made-for-every-moment" className="fc">
       <picture>
         <source media="(min-width: 960px)" srcSet={sectionBgLaptop} />
-        <img src={sectionBg} alt="" className="fc-bg" aria-hidden="true" />
+        <img src={sectionBg} alt="" className="fc-bg" aria-hidden="true" loading="lazy" decoding="async" />
       </picture>
 
       <div className="container fc-content">

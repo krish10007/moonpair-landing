@@ -14,8 +14,8 @@ import cardStayConnected from '../../assets/section 2/card-stay-connected.jpg';
 import cardDiscover from '../../assets/section 2/card-discover.jpg';
 import cardKeepStory from '../../assets/section 2/card-keep-story.jpg';
 import cardBuildUniverse from '../../assets/section 2/card-build-universe-s2.jpg';
-import sectionBg from '../../assets/section 2 back.png';
-import sectionBgLaptop from '../../assets/section 2 back laptop.png';
+import sectionBg from '../../assets/section 2 back.jpg';
+import sectionBgLaptop from '../../assets/section 2 back laptop.jpg';
 import './EverythingYouCanDo.css';
 
 const CARDS = [
@@ -153,7 +153,7 @@ export default function EverythingYouCanDo() {
     <section id="everything-you-can-do" className="eycd">
       <picture>
         <source media="(min-width: 960px)" srcSet={sectionBgLaptop} />
-        <img src={sectionBg} alt="" className="eycd-bg" aria-hidden="true" />
+        <img src={sectionBg} alt="" className="eycd-bg" aria-hidden="true" loading="lazy" decoding="async" />
       </picture>
 
       <div className="eycd-content container">

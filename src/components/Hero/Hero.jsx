@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import galaxyBg from '../../assets/hero galaxy01.png';
-import galaxyBgLaptop from '../../assets/hero_galaxy_1366x768.png';
+import galaxyBg from '../../assets/hero galaxy01.jpg';
+import galaxyBgLaptop from '../../assets/hero_galaxy_1366x768.jpg';
 import ComingSoonModal from '../ComingSoonModal/ComingSoonModal';
 import './Hero.css';
 
@@ -35,7 +35,7 @@ export default function Hero() {
     <section id="hero" className="hero">
       <picture>
         <source media="(min-width: 960px)" srcSet={galaxyBgLaptop} />
-        <img src={galaxyBg} alt="" className="hero-bg" aria-hidden="true" />
+        <img src={galaxyBg} alt="" className="hero-bg" aria-hidden="true" fetchPriority="high" decoding="async" />
       </picture>
 
       <div className="hero-content container">
